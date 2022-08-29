@@ -29,6 +29,8 @@ const List = ( { searchResult } ) => {
   const getEmail = (e) => {
     setNewEmail(e.target.value);
   };
+
+
       
   const removeWorker = (r) => {
     const remove = inputList.filter(data => 
@@ -51,6 +53,8 @@ const List = ( { searchResult } ) => {
             return f;
           } else if ( f.nombre.toLocaleLowerCase().includes(searchResult.toLocaleLowerCase()) ) {
             return searchResult;
+          } else {
+            return console.log('Nothing to see here!');
           };
         }).map(d =>
           <li className="formResults" key={ d.id }>
